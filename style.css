@@ -1,0 +1,109 @@
+/* body */
+body{
+    background: rgb(46, 40, 54);
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+    text-align: center;
+}
+
+.winner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-height: 100px;
+    max-width: fit-content;
+    margin:auto;
+    color:rgb(225, 170, 125);
+}
+
+.turn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-height: 100px;
+    max-width: fit-content;
+    margin:auto;
+    color:rgb(225, 170, 125);
+}
+
+/* main container */
+.container{
+    color: rgb(225, 170, 125);
+    display:block;
+    text-align:center;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    background: rgb(46, 40, 54);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+/* game buttons and container */
+.game{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4px;
+    justify-content: center;
+    text-align:center;
+   
+}
+.game_but{
+    background-color: rgb(46, 40, 54);
+    border: 2px solid rgb(225, 170, 125);
+    height: 150px;
+    width: 150px;
+    color: rgb(225, 170, 125);
+    font-size: 60px;
+    cursor:pointer;
+}
+
+/* reset button */
+#reset{
+    margin-top:20px;
+    color: rgb(225, 170, 125);
+    border: 2px solid rgb(225, 170, 125);
+    background-color: rgb(46, 40, 54);
+    height: 40px;
+    width: 90px;
+    cursor:pointer;
+}
+
+/* for toggle button */
+input{
+    display: none;
+}
+.toggle{
+    margin-top: 15px;
+    margin-right: 40px;
+    margin-left:auto;
+    width:60px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background-color: rgb(225, 170, 125);
+    width: 60px;
+    height: 30px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    transition: 0.4s;
+}
+input:checked + .button{    
+    background-color: rgb(46, 40, 54);
+}
+input:checked + .button::before{    
+    transform: translateX(-30px)
+}
